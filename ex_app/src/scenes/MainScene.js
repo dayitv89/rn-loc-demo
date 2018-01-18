@@ -41,6 +41,7 @@ export default class MainScene extends Component {
 					buttonStyle={{ borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0 }}
 					title="VIEW NOW"
 					onPress={() => this.onCellTapped({ item, index })}
+					raised
 				/>
 			</Card>
 		);
@@ -49,7 +50,14 @@ export default class MainScene extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-				<SearchBar placeholder="Search city..." onChangeText={this.onSearch} onClearText={this.onClearSearch} />
+				<SearchBar
+					placeholder="Search city..."
+					onChangeText={this.onSearch}
+					onClearText={this.onClearSearch}
+					lightTheme
+					containerStyle={{ backgroundColor: '#03A9F4', borderTopWidth: 0, borderBottomWidth: 0 }}
+					inputStyle={{ backgroundColor: 'rgb(244, 244, 244)' }}
+				/>
 				<FlatList data={this.state.cites} renderItem={this.renderCell} keyExtractor={(item, index) => index} />
 			</View>
 		);
@@ -59,7 +67,7 @@ export default class MainScene extends Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: 'rgb(244, 244, 244)'
+		backgroundColor: 'rgb(225, 225, 225)'
 	},
 	cell: {
 		borderRadius: 5,

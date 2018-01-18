@@ -28,11 +28,11 @@ const Cities = [
 	},
 	{
 		cityId: 2,
-		cityName: 'Delhi',
+		cityName: 'New Delhi',
 		citySubtitle: 'India’s Capital',
 		cityInfo:
 			'New Delhi is the capital of India and one of Delhi city’s 11 districts. Although colloquially Delhi and New Delhi are used interchangeably to refer to the National Capital Territory of Delhi, these are two distinct entities, with New Delhi forming a small part of Delhi. The National Capital Region is a much larger entity comprising the entire National Capital Territory of Delhi along with adjoining districts. It is surrounded by Haryana on three sides and Uttar Pradesh on the east.',
-		cityImageUri: 'https://c1.staticflickr.com/9/8073/8303525233_4c5c1ae11f_b.jpg',
+		cityImageUri: 'https://c1.staticflickr.com/9/8648/15761369037_8787fc45d2_z.jpg',
 		cityLatitude: 28.61,
 		cityLongitude: 77.23,
 		cityDistance: null,
