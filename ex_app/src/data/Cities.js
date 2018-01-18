@@ -56,12 +56,11 @@ const Cities = [
 	{
 		cityId: 3,
 		cityName: 'Mumbai',
-		citySubtitle: 'India’s Finance Capital',
-		cityInfo:
-			'New Delhi is the capital of India and one of Delhi city’s 11 districts. Although colloquially Delhi and New Delhi are used interchangeably to refer to the National Capital Territory of Delhi, these are two distinct entities, with New Delhi forming a small part of Delhi. The National Capital Region is a much larger entity comprising the entire National Capital Territory of Delhi along with adjoining districts. It is surrounded by Haryana on three sides and Uttar Pradesh on the east.',
+		citySubtitle: 'India’s financial Capital',
+		cityInfo: `The name Mumbai is derived from Mumbā or Mahā-Ambā—the name of the patron goddess (kuladevata) Mumbadevi of the native Agri, Koli and Somvanshi communities and ā'ī meaning "mother" in the Marathi language, which is the mother tongue of the Koli people and the official language of Maharashtra.`,
 		cityImageUri: 'https://c1.staticflickr.com/4/3202/2802511600_30ddcdba6e.jpg',
-		cityLatitude: 28.61,
-		cityLongitude: 77.23,
+		cityLatitude: 19.076,
+		cityLongitude: 72.87773,
 		cityDistance: null,
 		cityNearBy: [
 			{
