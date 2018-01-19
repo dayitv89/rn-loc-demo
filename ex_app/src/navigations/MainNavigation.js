@@ -1,15 +1,13 @@
 import { StackNavigator } from 'react-navigation';
 import { StackNavigatorHelper } from 'react-navigation-helper';
 
-import MainScene from '../scenes/MainScene';
+import Scenes from '../scenes';
 
 export default StackNavigatorHelper.exportStackNavigator(
 	StackNavigator(
 		{
-			MainScene: { screen: StackNavigatorHelper.setInitParamsToProps(MainScene) }
-			// MyComponent2: { screen: StackNavigatorHelper.paramsToProps(MyComponent2) },
-			// MyComponent3: { screen: StackNavigatorHelper.paramsToProps(MyComponent3) },
-			// MyComponent4: { screen: StackNavigatorHelper.paramsToProps(MyComponent4) }
+			MainScene: { screen: StackNavigatorHelper.setInitParamsToProps(Scenes.MainScene) },
+			CityDetailScene: { screen: StackNavigatorHelper.paramsToProps(Scenes.CityDetailScene) }
 		},
 		{
 			cardStyle: {

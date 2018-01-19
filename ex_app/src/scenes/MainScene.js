@@ -60,7 +60,7 @@ export default class MainScene extends Component {
 	}
 
 	onCellTapped({ item, index }) {
-		console.warn(item.cityName, index);
+		this.props.navigation.navigate('CityDetailScene', { data: item });
 	}
 
 	onFloatMenu(btnName) {
@@ -88,10 +88,10 @@ export default class MainScene extends Component {
 			>
 				<Text style={{ marginBottom: 10 }}>{item.cityInfo}</Text>
 				<Button
-					icon={{ name: 'hearing' }}
+					icon={{ name: 'remove-red-eye' }}
 					backgroundColor="#03A9F4"
 					buttonStyle={{ borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0 }}
-					title="VIEW NOW"
+					title="SHOW DETAILS"
 					onPress={() => this.onCellTapped({ item, index })}
 					raised
 				/>
@@ -104,7 +104,7 @@ export default class MainScene extends Component {
 			<View style={styles.container}>
 				<SearchBar
 					ref={o => (this.searchBar = o)}
-					placeholder="Search city..."
+					placeholder="Search city / places..."
 					onChangeText={this.onSearch}
 					onClearText={this.onClearSearch}
 					lightTheme
