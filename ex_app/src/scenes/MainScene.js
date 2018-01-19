@@ -1,7 +1,37 @@
 import React, { Component } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import { SearchBar, Card, Button } from 'react-native-elements';
+import { FloatingAction } from 'react-native-floating-action';
+
+import FloatImgs from '../imgs/float_menu';
 import Cities from '../data/Cities';
+
+const actions = [
+	{
+		text: 'Language',
+		icon: FloatImgs.language,
+		name: 'bt_language',
+		position: 1
+	},
+	{
+		text: 'Settings',
+		icon: FloatImgs.settings,
+		name: 'bt_settings',
+		position: 2
+	},
+	{
+		text: 'About Us',
+		icon: FloatImgs.about,
+		name: 'bt_about',
+		position: 3
+	},
+	{
+		text: 'Search',
+		icon: FloatImgs.search,
+		name: 'bt_search',
+		position: 4
+	}
+];
 
 export default class MainScene extends Component {
 	constructor(props) {
@@ -10,6 +40,7 @@ export default class MainScene extends Component {
 		this.onSearch = this.onSearch.bind(this);
 		this.onClearSearch = this.onClearSearch.bind(this);
 		this.renderCell = this.renderCell.bind(this);
+		this.onFloatMenu = this.onFloatMenu.bind(this);
 	}
 
 	onSearch(text) {
@@ -22,6 +53,19 @@ export default class MainScene extends Component {
 
 	onCellTapped({ item, index }) {
 		console.warn(item.cityName, index);
+	}
+
+	onFloatMenu(btnName) {
+		switch (btnName) {
+			case 'bt_language':
+			case 'bt_settings':
+			case 'bt_about':
+				console.warn(btnName);
+				break;
+			case 'bt_search':
+				this.searchBar.focus();
+				break;
+		}
 	}
 
 	renderCell({ item, index }) {
@@ -51,6 +95,7 @@ export default class MainScene extends Component {
 		return (
 			<View style={styles.container}>
 				<SearchBar
+					ref={o => (this.searchBar = o)}
 					placeholder="Search city..."
 					onChangeText={this.onSearch}
 					onClearText={this.onClearSearch}
@@ -59,6 +104,7 @@ export default class MainScene extends Component {
 					inputStyle={{ backgroundColor: 'rgb(244, 244, 244)' }}
 				/>
 				<FlatList data={this.state.cites} renderItem={this.renderCell} keyExtractor={(item, index) => index} />
+				<FloatingAction floatingIcon={FloatImgs.more} actions={actions} onPressItem={this.onFloatMenu} />
 			</View>
 		);
 	}
