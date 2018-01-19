@@ -1,0 +1,3 @@
+rootProject.name = 'today.goon.india'
+
+include ':app'

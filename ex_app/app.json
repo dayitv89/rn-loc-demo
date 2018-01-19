@@ -1,8 +1,13 @@
 {
+	"displayName": "Go On app",
+	"name": "today.goon.india",
 	"expo": {
 		"name": "Go On app",
 		"slug": "go-on",
 		"sdkVersion": "23.0.0",
-		"privacy": "unlisted"
+		"privacy": "unlisted",
+		"android": {
+			"package": "com.goon.india"
+		}
 	}
 }
