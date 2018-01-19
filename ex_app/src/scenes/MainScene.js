@@ -60,7 +60,7 @@ export default class MainScene extends Component {
 	}
 
 	onCellTapped({ item, index }) {
-		this.props.navigation.navigate('CityDetailScene', { data: item });
+		this.props.navigation.navigate('CityDetailScene', { data: item.sights });
 	}
 
 	onFloatMenu(btnName) {

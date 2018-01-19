@@ -3,5 +3,6 @@ export default {
 	settings: require('./settings.png'),
 	about: require('./about.png'),
 	search: require('./search.png'),
-	more: require('./more.png')
+	more: require('./more.png'),
+	back: require('./back.png')
 };
