@@ -9,7 +9,7 @@ const Cities = [
 		cityLatitude: 26.9,
 		cityLongitude: 75.8,
 		cityDistance: null,
-		cityNearBy: [
+		sights: [
 			{
 				locationId: 1,
 				locationName: 'Hawa Mahal',
@@ -36,7 +36,7 @@ const Cities = [
 		cityLatitude: 28.61,
 		cityLongitude: 77.23,
 		cityDistance: null,
-		cityNearBy: [
+		sights: [
 			{
 				locationId: 1,
 				locationName: 'Qutb Minar',
@@ -62,7 +62,7 @@ const Cities = [
 		cityLatitude: 19.076,
 		cityLongitude: 72.87773,
 		cityDistance: null,
-		cityNearBy: [
+		sights: [
 			{
 				locationId: 1,
 				locationName: 'Qutb Minar',

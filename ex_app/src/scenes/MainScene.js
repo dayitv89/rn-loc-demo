@@ -44,7 +44,15 @@ export default class MainScene extends Component {
 	}
 
 	onSearch(text) {
-		this.setState({ cites: Cities.filter(i => i.cityName.toLowerCase().includes(text.toLowerCase())) });
+		this.setState({
+			cites: Cities.filter(i => {
+				const searchWord = text.toLowerCase();
+				return (
+					i.cityName.toLowerCase().includes(searchWord) ||
+					i.sights.some(j => j.locationName.toLowerCase().includes(searchWord))
+				);
+			})
+		});
 	}
 
 	onClearSearch(text) {
